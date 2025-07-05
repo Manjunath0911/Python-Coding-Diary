@@ -7,5 +7,9 @@ def even_number(num):
         return print(f"{num} is even number")
     else:
         return print(f"{num} is not even number")
+<<<<<<< HEAD
 num  = int(input("enter the Numer : "))
 even_number(num)
+=======
+even_number(4)
+>>>>>>> develop
