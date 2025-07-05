@@ -1,2 +1,0 @@
-hello this my first file to test.
-hello this is my second line of text.
