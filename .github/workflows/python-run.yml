@@ -1,7 +1,6 @@
 # File: .github/workflows/python-run.yml
 name: Run Even Number Checker
 
-# Trigger this workflow on every push to the main branch
 on:
   push:
     branches: [main]
@@ -20,5 +19,4 @@ jobs:
           python-version: '3.12'
 
       - name: Run Even Number Checker
-        run: |
-          python filename.py
+        run: python pythonfile.py
