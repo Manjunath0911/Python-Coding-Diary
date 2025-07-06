@@ -8,3 +8,15 @@ def even_number(num):
     else:
         return print(f"{num} is not even number")
 even_number(4)
+
+# 2. Python program to check if a string is a palindrome.
+
+def palindrome(string):
+   rev_string = string[::-1]
+   if string == rev_string:
+       print(f'{string} is a palindrome')
+   else:
+       print(f'{string} is not a palindrome')
+string = "MALAYALAM"
+palindrome(string)
+ 
