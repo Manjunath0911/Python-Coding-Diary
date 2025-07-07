@@ -19,4 +19,14 @@ def palindrome(string):
        print(f'{string} is not a palindrome')
 string = "MALAYALAM"
 palindrome(string)
+
+# 3. python program to find the factorial of a number
+
+def factorial(num):
+    if num == 0:
+        return 1
+    else:
+        return num * factorial(num -1)
+print(factorial(5))
+
  
