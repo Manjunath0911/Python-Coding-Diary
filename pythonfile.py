@@ -42,3 +42,13 @@ def find_largest(numbers):
 nums = [10, 5, 8, 20, 3]
 largest_num = find_largest(nums)
 print(f"The largest number is {largest_num}") 
+
+# 5. Python program to reverse a string.
+
+def reverse_string(string):
+    return string[::-1]
+
+# Test the function
+text = "Hello, Manju"
+reversed_text = reverse_string(text)
+print(reversed_text)
