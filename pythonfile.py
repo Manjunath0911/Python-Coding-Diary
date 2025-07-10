@@ -37,8 +37,6 @@ def find_largest(numbers):
         if num > largest:
             largest = num
     return largest
-
-# Test the function
 nums = [10, 5, 8, 20, 3]
 largest_num = find_largest(nums)
 print(f"The largest number is {largest_num}") 
@@ -47,8 +45,15 @@ print(f"The largest number is {largest_num}")
 
 def reverse_string(string):
     return string[::-1]
-
-# Test the function
 text = "Hello, Manju"
 reversed_text = reverse_string(text)
 print(reversed_text)
+
+# 6. python program to seperate the digits from the string and return the sum of the numbers
+
+def digit_sepearble(string):
+    digits = [int(char) for char in string if char.isdigit()]
+    total = sum(digits)
+    return total
+string = 'kukofm262'
+print(digit_sepearble(string))
