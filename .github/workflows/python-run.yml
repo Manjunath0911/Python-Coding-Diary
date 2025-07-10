@@ -1,0 +1,22 @@
+# File: .github/workflows/python-run.yml
+name: Run Even Number Checker
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'
+
+      - name: Run Even Number Checker
+        run: python pythonfile.py
