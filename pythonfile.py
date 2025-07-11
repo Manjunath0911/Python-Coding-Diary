@@ -57,3 +57,16 @@ def digit_sepearble(string):
     return total
 string = 'kukofm262'
 print(digit_sepearble(string))
+
+# 7. python program to count the frequency of the number
+
+def frequency_count(numbers):
+    frequency = {}
+    for num in numbers:
+        if num in frequency:
+            frequency[num] += 1
+        else:
+            frequency[num] = 1
+    return frequency
+numbers = [1,2,4,5,2,4,5,1,7,8,5]
+print(frequency_count(numbers))
