@@ -70,3 +70,15 @@ def frequency_count(numbers):
     return frequency
 numbers = [1,2,4,5,2,4,5,1,7,8,5]
 print(frequency_count(numbers))
+
+# 8. python program to check whether it is a prime number or not
+
+def prime_number(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5)+1):
+        if num % i == 0:
+            return False
+    return True
+num = 10
+print(prime_number(num))
