@@ -82,3 +82,15 @@ def prime_number(num):
     return True
 num = 10
 print(prime_number(num))
+
+# 9 . Python program to find the common elements between two lists.
+
+def common_elements(lst1, lst2):
+    common_num = []
+    for num in lst1:
+        if num in lst2:
+            common_num.append(num)
+    return common_num
+lst1 = [1, 2, 3, 4, 5]
+lst2 = [4, 5, 6, 7, 8]
+print(common_elements(lst1, lst2))
