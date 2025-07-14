@@ -94,3 +94,10 @@ def common_elements(lst1, lst2):
 lst1 = [1, 2, 3, 4, 5]
 lst2 = [4, 5, 6, 7, 8]
 print(common_elements(lst1, lst2))
+
+# 10. python program to take input from the user:
+
+def get_user_input(input_from_user):
+    return print("your name is : ",input_from_user)
+input_from_user = input("Enter your name")
+get_user_input(input_from_user)
