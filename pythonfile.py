@@ -70,3 +70,34 @@ def frequency_count(numbers):
     return frequency
 numbers = [1,2,4,5,2,4,5,1,7,8,5]
 print(frequency_count(numbers))
+
+# 8. python program to check whether it is a prime number or not
+
+def prime_number(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5)+1):
+        if num % i == 0:
+            return False
+    return True
+num = 10
+print(prime_number(num))
+
+# 9 . Python program to find the common elements between two lists.
+
+def common_elements(lst1, lst2):
+    common_num = []
+    for num in lst1:
+        if num in lst2:
+            common_num.append(num)
+    return common_num
+lst1 = [1, 2, 3, 4, 5]
+lst2 = [4, 5, 6, 7, 8]
+print(common_elements(lst1, lst2))
+
+# 10. python program to take input from the user:
+
+def get_user_input(input_from_user):
+    return print("your name is : ",input_from_user)
+input_from_user = input("Enter your name")
+get_user_input(input_from_user)
