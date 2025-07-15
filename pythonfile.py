@@ -104,3 +104,10 @@ def even_num(num):
         return False
 num = 25
 even_num(num)
+
+# 11. python program to calculate the area of the rectangle.
+
+def area_of_rectangle(length, bredth):
+    area = length * bredth
+    return area
+print(area_of_rectangle(10,20))
