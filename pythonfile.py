@@ -111,3 +111,27 @@ def area_of_rectangle(length, bredth):
     area = length * bredth
     return area
 print(area_of_rectangle(10,20))
+
+# 12. python program simple calculator
+
+def simple_calculator(num1, num2):
+    add = num1 + num2
+    sub = num1 - num2
+    mul = num1 * num2
+    try:
+       div = num1 / num2
+    except ZeroDivisionError:
+        div = print("exception")
+    
+    return add , sub , mul, div
+
+print(simple_calculator(12,4))
+    
+    
+
+
+
+
+
+
+
