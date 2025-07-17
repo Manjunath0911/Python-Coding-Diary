@@ -111,3 +111,4 @@ def area_of_rectangle(length, bredth):
     area = length * bredth
     return area
 print(area_of_rectangle(10,20))
+
