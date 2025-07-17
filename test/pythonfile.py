@@ -112,3 +112,55 @@ def area_of_rectangle(length, bredth):
     return area
 print(area_of_rectangle(10,20))
 
+# 12. python program for stack operation
+
+class Stack:
+    def __init__(self):
+        self.stack = []
+        
+    def push(self, data):
+        self.stack.append(data)
+        return self.stack
+        
+    def display(self):
+        return self.stack
+        
+    def pop(self):
+        if not self.is_empty():
+            return self.stack.pop()
+        return "stack is empty cant pop"
+    
+    def peek(self):
+        if not self.is_empty():
+            return self.stack[-1]
+        return "stack is empty cant see identify top value"
+    
+    def is_empty(self):
+        return len(self.stack) == 0
+    
+    def size(self):
+        return len(self.stack)
+
+obj = Stack()
+
+print(obj.push(20))
+print(obj.push(30))
+print(obj.push(40))
+print(obj.push(50))
+print(obj.push(60))
+print(obj.display(),"display stack")
+print(obj.pop())
+print(obj.pop())
+print(obj.pop())
+print(obj.display())
+print(obj.is_empty())
+print(obj.pop())
+print(obj.display())
+print(obj.peek())
+print(obj.size())
+print(obj.display())
+print(obj.pop())
+print(obj.display())
+print(obj.is_empty())
+print(obj.pop())
+print(obj.peek())
