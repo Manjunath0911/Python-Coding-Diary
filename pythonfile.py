@@ -144,23 +144,29 @@ class Stack:
 obj = Stack()
 
 print(obj.push(20))
-print(obj.push(30))
-print(obj.push(40))
-print(obj.push(50))
-print(obj.push(60))
 print(obj.display(),"display stack")
 print(obj.pop())
-print(obj.pop())
-print(obj.pop())
-print(obj.display())
-print(obj.is_empty())
-print(obj.pop())
-print(obj.display())
-print(obj.peek())
-print(obj.size())
-print(obj.display())
-print(obj.pop())
 print(obj.display())
 print(obj.is_empty())
 print(obj.pop())
 print(obj.peek())
+
+# 13. You are given a list of operations:
+
+# "type X" means type the character X.
+
+# "undo" means remove the last typed character.
+
+def text_editor(ops):
+    stack = []
+    for op in ops:
+        if op.startswith("type"):
+            _, char = op.split()
+            stack.append(char)
+        elif op == "undo" and stack:
+            stack.pop()
+    return ''.join(stack)
+
+operations = ["type a", "type b", "type c", "undo", "type d"]
+print(text_editor(operations)) 
+
