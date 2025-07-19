@@ -170,3 +170,31 @@ def text_editor(ops):
 operations = ["type a", "type b", "type c", "undo", "type d"]
 print(text_editor(operations)) 
 
+# 14. pyton program for creating a singly linked list
+
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+    
+class Linked_list:
+    def __init__(self):
+        self.head = None 
+    
+    def print_list(self):
+        current = self.head
+        while current:
+            print(current.data, end=" -> ")
+            current = current.next
+        print("None")
+
+task1 = Node("wake up")
+task2 = Node("go to gym")
+task3 = Node("take rest")
+
+task1.next = task2
+task2.next = task3
+
+tasks = Linked_list()
+tasks.head = task1
+tasks.print_list()
