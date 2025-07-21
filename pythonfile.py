@@ -181,6 +181,29 @@ class Linked_list:
     def __init__(self):
         self.head = None 
     
+    def add_task(self,task):
+        new_task = Node(task)
+        if not self.head:
+            self.head = new_task
+        else:
+            curr = self.head
+            while curr.next:
+                curr = curr.next
+            curr.next = new_task
+    
+    def delete_task(self, task):
+        curr = self.head
+        prev = None
+        while curr:
+            if curr.data == task:
+                if prev:
+                    prev.next = curr.next
+                else:
+                    self.head = curr.next
+                return
+            prev = curr
+            curr = curr.next
+
     def print_list(self):
         current = self.head
         while current:
@@ -188,13 +211,11 @@ class Linked_list:
             current = current.next
         print("None")
 
-task1 = Node("wake up")
-task2 = Node("go to gym")
-task3 = Node("take rest")
+todo = Linked_list()
+todo.add_task("Buy groceries")
+todo.add_task("Study DSA")
+todo.add_task("Workout")
+todo.print_list()
+todo.delete_task("Study DSA")
+todo.print_list()
 
-task1.next = task2
-task2.next = task3
-
-tasks = Linked_list()
-tasks.head = task1
-tasks.print_list()
