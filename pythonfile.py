@@ -219,4 +219,83 @@ todo.print_list()
 todo.delete_task("Study DSA")
 todo.print_list()
 
-# day 15 python program added
+# day 15 song playlist
+class SongNode:
+    def __init__(self, title):
+        self.title = title
+        self.next = None
+
+class Playlist:
+    def __init__(self):
+        self.head = None
+
+    def add_song(self, title):
+        new_song = SongNode(title)
+        if not self.head:
+            self.head = new_song
+            print(f"'{title}' added as the first song.")
+            return
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = new_song
+        print(f"'{title}' added to the playlist.")
+
+    def remove_song(self, title):
+        current = self.head
+        prev = None
+        while current:
+            if current.title == title:
+                if prev:
+                    prev.next = current.next
+                else:
+                    self.head = current.next
+                print(f"'{title}' removed from the playlist.")
+                return
+            prev = current
+            current = current.next
+        print(f"'{title}' not found in the playlist.")
+
+    def display(self):
+        if not self.head:
+            print("The playlist is empty.")
+            return
+        current = self.head
+        print("🎵 Playlist:")
+        while current:
+            print(f" - {current.title}")
+            current = current.next
+
+    def search_song(self, title):
+        current = self.head
+        while current:
+            if current.title == title:
+                print(f"✅ '{title}' is in the playlist.")
+                return True
+            current = current.next
+        print(f"❌ '{title}' is not in the playlist.")
+        return False
+
+    def count_songs(self):
+        count = 0
+        current = self.head
+        while current:
+            count += 1
+            current = current.next
+        print(f"Total songs in playlist: {count}")
+        return count
+
+# 👇 Example usage:
+playlist = Playlist()
+playlist.add_song("Imagine - John Lennon")
+playlist.add_song("Bohemian Rhapsody - Queen")
+playlist.add_song("Shape of You - Ed Sheeran")
+
+playlist.display()
+playlist.search_song("Bohemian Rhapsody - Queen")
+playlist.remove_song("Shape of You - Ed Sheeran")
+playlist.display()
+playlist.count_songs()
+    
+
+
